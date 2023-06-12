@@ -369,37 +369,7 @@ li.check:before {
   border-radius: 20px;
   background-color: #ffff;
   width: 100%;
-  height: 700px;
-}
-
-@media (max-width: 1024px) {
-  .container-hero {
-    height: 650px;
-  }
-}
-
-@media (max-width: 680px) {
-  .container-hero {
-    height: 600px;
-  }
-}
-
-@media (max-width: 600px) {
-  .container-hero {
-    height: 550px;
-  }
-}
-
-@media (max-width: 500px) {
-  .container-hero {
-    height: 500px;
-  }
-}
-
-@media (max-width: 460px) {
-  .container-hero {
-    height: 480px;
-  }
+  height: auto;
 }
 
 .change_color {

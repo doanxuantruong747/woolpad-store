@@ -21,7 +21,7 @@ export default function Home() {
     <React.Suspense>
       <Head>
         <title>WoolpadStore</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <LayoutWrapper>
         <HeroHompage />

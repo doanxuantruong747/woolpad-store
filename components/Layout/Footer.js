@@ -1,40 +1,28 @@
 //import logo from "@/assets/footer/logo.png";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link as LinkScroll } from "react-scroll";
 
-import fb from "@/assets/footer/snsIcons/fb.png";
-import tw from "@/assets/footer/snsIcons/tw.png";
-import lk from "@/assets/footer/snsIcons/lk.png";
-import ins from "@/assets/footer/snsIcons/ins.png";
-// import yt from "@/assets/footer/snsIcons/yt.png";
-// import ds from "@/assets/footer/snsIcons/ds.png";
-// import tele from "@/assets/footer/snsIcons/tele.png";
+import ListFoodter from "../common/ListFoodter";
+import Image from "next/image";
+
 const snsData = [
   {
-    icon: "tw",
-    to: "https://twitter.com/FriendifyGPT",
-    src: fb
-  },
-  {
     icon: "fb",
-    to: "https://www.facebook.com/FriendifyGPT",
-    src: tw
+    to: "https://www.facebook.com/profile.php?id=100092633490541&mibextid=LQQJ4d",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
   },
   {
     icon: "ins",
-    to: "https://www.instagram.com/friendify.gpt",
-    src: lk
+    to: "",
+    src: "https://w7.pngwing.com/pngs/419/180/png-transparent-tiktok-icon-white-hd-logo.png"
+  },
+  {
+    icon: "intergram",
+    to: "",
+    src: "https://w7.pngwing.com/pngs/16/46/png-transparent-made-in-kings-heath-instagram-facebook-female-graphy-instagram-logo-instagram-icon-text-trademark-magenta.png"
   },
 
 ];
-import { NavData } from "./Header";
-import CustomSection from "../common/Section";
-import Collapse from "../common/Collapse";
-import ListFoodter from "../common/ListFoodter";
-import { TabItem } from "flowbite-react/lib/esm/components/Tab/TabItem";
 
 const listExplore = [
   { title: "Saigon +", src: "" },
@@ -74,11 +62,25 @@ const Footer = () => {
 
     <div className="custom_container h-[200px] pt-16">
 
-      <div className=" flex flex-col justify-center items-center">
-        <div className=" h-[1px] bg-[#beb8b8c5] w-[90%] text-center pl-[10%] pr-[10%]" />
-        <p className="text-[#be1c1cda] mt-5 md:text-[24px] text-[18px] text-center font-semibold">HotLine: 0328.488.081 hoặc 0903.090.891</p>
-        <p className="text-[#7a7878da] text-[12px] mt-5">Copyright © 2023 Đoàn Xuân Trường</p>
+      <div className=" flex items-center md:justify-between justify-center md:flex-row flex-col">
+
+        <p className="text-[#be1c1cda] mt-5 md:text-[18px] text-[16px] text-center font-semibold">HotLine: 0328.488.081 hoặc 0903.090.891</p>
+
+        <div className=" flex md:pt-0 pt-[5%] ">
+          {snsData.map((item, index) => (
+            <div key={index} className="px-[5px] cursor-pointer">
+              <a href={item.to} target="_blank">
+                <Image alt="content img" src={item.src} fill style={{ objectFit: "contain" }} height="40" width="40" />
+              </a>
+            </div>
+
+          ))}
+        </div>
+
+
       </div>
+      <p className="text-[#7a7878da] text-[12px] mt-5 text-center">Copyright © 2023 Đoàn Xuân Trường</p>
+
       {/* <div className=" hidden lg:block">
 
       </div>

@@ -15,7 +15,7 @@ const About = () => {
   <React.Suspense>
    <Head>
     <title>Woolstore - TiVi</title>
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="//favicon.png" />
    </Head>
    <LayoutWrapper>
     <DetailTiVi />

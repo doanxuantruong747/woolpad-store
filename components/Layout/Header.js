@@ -15,10 +15,10 @@ export const NavData = [
     title: "Tivi Woolpad",
     to: "/tivi",
   },
-  // {
-  //   title: "Nội Thất",
-  //   to: "",
-  // },
+  {
+    title: "Nội Thất",
+    to: "/noi-that",
+  },
 
 
 ];

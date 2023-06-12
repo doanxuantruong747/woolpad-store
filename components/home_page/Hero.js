@@ -1,23 +1,19 @@
-import hinh1 from '@/assets/hero/tivi1.png';
-import hinh5 from '@/assets/hero/hinh5.png';
-import hinh1Mobi from '@/assets/hero/hinh1.png';
-import hinh2Mobi from '@/assets/hero/hinh2.png';
 import detail1 from '@/assets/tivipage/detail1-1.jpg';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
-import { Pagination, EffectFade, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useRouter } from 'next/router';
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 
 
 const HeroHompage = () => {
-  const { i18n, t } = useTranslation();
+
   const pagination = {
     clickable: true,
   };
-
+  const router = useRouter();
   const slideData = [
     {
       src: detail1,
@@ -84,14 +80,12 @@ const HeroHompage = () => {
                       <span className='ml-[15px] 2xl:text-[40px] xl:text-[30px] text-[25px] font-normal text-[#000]'>{item.title}</span>
                     </p>
                     <p className='2xl:text-[35px] xl:text-[28px] text-[18px] font-semibold'>{item.subTitle}</p>
-                    <a href='/tivi'>
-                      <button
-                        type="button"
-                        class="button_rotate_animation text-center shadow-box w-[140px] h-[50px] mt-[20px] text-[18px] font-bold leading-normal text-[#ffff] font-normal rounded-[40.0783px] hover:bg-success-600 bg-[#131212] hover:bg-[#111111] shadow-md"
-                      >
-                        Xem Thêm
-                      </button>
-                    </a>
+                    <button onClick={() => { router.push('/tivi') }}
+                      type="button"
+                      class="button_rotate_animation text-center shadow-box w-[140px] h-[50px] mt-[20px] text-[18px] leading-normal text-[#ffff] font-normal rounded-[40.0783px] hover:bg-success-600 bg-[#131212] hover:bg-[#111111] shadow-md"
+                    >
+                      Xem Thêm
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>
@@ -129,14 +123,13 @@ const HeroHompage = () => {
                       style={{ objectFit: "contain" }}
                     />
                   </div>
-                  <a href='/tivi'>
-                    <button
-                      type="button"
-                      class="button_rotate_animation text-center shadow-box w-[130px] h-[40px] text-[18px] font-normal leading-normal text-[#ffff] rounded-[40.0783px] hover:bg-success-600 bg-[#131212] hover:bg-[#111111] shadow-md"
-                    >
-                      Xem Thêm
-                    </button>
-                  </a>
+                  <button onClick={() => { router.push('/tivi') }}
+                    type="button"
+                    class="button_rotate_animation text-center shadow-box w-[130px] h-[40px] text-[18px] font-normal leading-normal text-[#ffff] rounded-[40.0783px] hover:bg-success-600 bg-[#131212] hover:bg-[#111111] shadow-md"
+                  >
+                    Xem Thêm
+                  </button>
+
                 </div>
               </SwiperSlide>
             ))}
